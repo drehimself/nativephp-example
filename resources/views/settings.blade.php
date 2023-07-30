@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NativePHP</title>
-    @vite('resources/js/app.js')
-</head>
-
-<body>
-    <div>
-        <a href="/">Home</a>
-    </div>
+<x-layout>
     <div>
         <form action="/settings" method="POST">
             @csrf
@@ -32,6 +19,4 @@
             <button type="submit">Save</button>
         </form>
     </div>
-</body>
-
-</html>
+</x-layout>

@@ -27,7 +27,6 @@ Route::get('/', function () {
 
     return view('welcome', [
         'users' => User::all(),
-        'theme' => Settings::get('theme', 'light'),
     ]);
 });
 
@@ -45,9 +44,7 @@ Route::post('/user', function () {
 Route::view('/about', 'about')->name('about');
 
 Route::get('/settings', function () {
-    return view('/settings', [
-        'theme' => Settings::get('theme', 'light'),
-    ]);
+    return view('/settings');
 });
 
 Route::post('/settings', function (Request $request) {
